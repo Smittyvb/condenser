@@ -15,7 +15,7 @@ export default class UserAccessTable extends React.Component {
                 <table className="userAccessTable">
                     <thead>
                         <tr>
-                            <td>Roles &amp; privileges</td><td>Owner</td><td>Admin</td><td>Mod</td>
+                            <th>Roles &amp; privileges</th><th>Owner</th><th>Admin</th><th>Mod</th>
                         </tr>
                     </thead>
                     <tbody>

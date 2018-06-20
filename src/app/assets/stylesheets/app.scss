@@ -240,3 +240,20 @@ a[rel="nofollow noopener"]:after {
     background-color: themed('colorAccent');
   }
 }
+
+.userAccessTable {
+  @include themify($themes) {
+    border: themed('borderDark');
+  }
+  font-weight: normal;
+  border-collapse: collapse;
+  td, th {
+    @include themify($themes) {
+      border: themed('borderDark');
+      background-color: themed('moduleBackgroundColor');
+    }
+  }
+  th {
+    font-weight: bold;
+  }
+}
