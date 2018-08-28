@@ -813,7 +813,10 @@
         "profile_about": "About",
         "profile_location": "Location",
         "profile_website": "Website",
-        "saved": "Saved!"
+        "saved": "Saved!",
+        "rep_system": "Influence System",
+        "rep_votes": "Reputation (vote-based)",
+        "rep_follows": "UserAuthority (follow-based)"
     },
     "transfer_jsx": {
         "amount_is_in_form": "Amount is in the form 99999.999",

@@ -389,7 +389,6 @@ class Settings extends React.Component {
                             <br />
                             <br />
                             <h4>{tt('settings_jsx.preferences')}</h4>
-
                             <div className="row">
                                 <div className="small-12 medium-6 large-12 columns">
                                     <label>
@@ -428,7 +427,6 @@ class Settings extends React.Component {
                                 </div>
                             </div>
                             <br />
-
                             <div className="row">
                                 <div className="small-12 medium-6 large-12 columns">
                                     <label>
@@ -453,7 +451,6 @@ class Settings extends React.Component {
                                 </div>
                             </div>
                             <br />
-
                             <div className="row">
                                 <div className="small-12 medium-6 large-12 columns">
                                     <label>
@@ -490,7 +487,6 @@ class Settings extends React.Component {
                                 </div>
                             </div>
                             <br />
-
                             <div className="row">
                                 <div className="small-12 medium-6 large-12 columns">
                                     <label>
@@ -526,7 +522,29 @@ class Settings extends React.Component {
                                     </label>
                                 </div>
                             </div>
-                            <br />
+                            <div className="row">
+                                <br />
+                                <div className="small-12 medium-6 large-12 columns">
+                                    <label>
+                                        {tt('settings_jsx.rep_system')}
+                                        <select
+                                            defaultValue={
+                                                user_preferences.repSystem ||
+                                                'votes'
+                                            }
+                                            onChange={function() {}}
+                                        >
+                                            <option value="votes">
+                                                {tt('settings_jsx.rep_votes')}
+                                            </option>
+                                            <option value="ua">
+                                                {tt('settings_jsx.rep_follows')}
+                                            </option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <br /> <br />
                         </div>
                     </div>
                 )}
