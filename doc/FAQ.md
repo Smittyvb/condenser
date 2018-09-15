@@ -1,4 +1,4 @@
-# steemit.com Repository FAQ
+# Condenser Repository FAQ
 
 # Golden Rules
 

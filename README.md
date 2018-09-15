@@ -19,10 +19,10 @@ applications.
 
 #### Docker
 
-We highly recommend using docker to run condenser. This is how we run the
+We highly recommend using docker to run Condenser. This is how we run the
 live steemit.com site and it is the most supported (and fastest) method of
-both building and running condenser. We will always have the latest version
-of condenser (master branch) available on Docker Hub. Configuration settings
+both building and running Condenser. We will always have the latest version
+of Condenser (master branch) available on Docker Hub. Configuration settings
 can be set using environment variables (see configuration section below for
 more information). If you need to install docker, you can get it at
 https://get.docker.com
@@ -39,7 +39,7 @@ Environment variables can be added like this:
 docker run -it --env SDC_DATABASE_URL="mysql://user:pass@hostname/databasename" -p 8080:8080 steemit/condenser
 ```
 
-If you would like to modify, build, and run condenser using docker, it's as
+If you would like to modify, build, and run Condenser using docker, it's as
 simple as pulling in the github repo and issuing one command to build it,
 like this:
 
@@ -90,17 +90,17 @@ yarn global add babel-cli
 yarn install --frozen-lockfile
 yarn run build
 ```
-To run condenser in production mode, run:
+To run Condenser in production mode, run:
 
 ```bash
 yarn run production
 ```
 
-When launching condenser in production mode it will automatically use 1
+When launching Condenser in production mode it will automatically use 1
 process per available core. You will be able to access the front-end at
 http://localhost:8080 by default.
 
-To run condenser in development mode, run:
+To run Condenser in development mode, run:
 
 ```bash
 yarn run start
@@ -126,7 +126,7 @@ You can use Chromium to connect by finding the remote client at
 
 #### Configuration
 
-The intention is to configure condenser using environment variables. You
+The intention is to configure Condenser using environment variables. You
 can see the names of all of the available configuration environment
 variables in `config/custom-environment-variables.json`. Default values are
 stored in `config/defaults.json`.
@@ -142,13 +142,13 @@ Keep in mind environment variables only exist in your active session, so if
 you wish to save them for later use you can put them all in a file and
 `source` them in.
 
-If you'd like to statically configure condenser without variables you can
+If you'd like to statically configure Condenser without variables you can
 edit the settings directly in `config/production.json`. If you're running
 in development mode, copy `config/production.json` to `config/dev.json`
 with `cp config/production.json config/dev.json` and adjust settings in
 `dev.json`.
 
-If you're intending to run condenser in a production environment one
+If you're intending to run Condenser in a production environment one
 configuration option that you will definitely want to edit is
 `server_session_secret` which can be set by the environment variable
 `SDC_SESSION_SECRETKEY`. To generate a new value for this setting, you can
@@ -163,13 +163,13 @@ node
 ## Install mysql server
 
 If you've followed the instructions up until this point you will already
-have a running condenser installation which is entirely acceptable for
+have a running Condenser installation which is entirely acceptable for
 development purposes. It is *not required to run a SQL server for
 development*. If you're running a full-fledged site however, you will want
 to set one up.
 
 Once set up, you can set the mysql server configuration option for
-condenser using the environment variable `SDC_DATABASE_URL`, or
+Condenser using the environment variable `SDC_DATABASE_URL`, or
 alternatively by editing it in `config/production.json`. You will use the
 format `mysql://user:pass@hostname/databasename`.
 
@@ -220,7 +220,7 @@ mysql -u root
 ### Database migrations
 
 This is a required step in order for the database to be 'ready' for
-condenser's use.
+Condenser's use.
 
 Edit the file `src/db/config/config.json` using your favorite command line
 text editor being sure that the username, password, host, and database name
@@ -292,7 +292,7 @@ This will read data from the blobs in `api_mockdata` directory. If you want to u
 
 ### Run blackbox tests using nightwatch
 
-To run a Selenium test suite, start the condenser docker image with a name `condenser` (like `docker run --name condenser -itp 8080:8080 steemit/condenser:latest`) and then run the blackboxtest image attached to the condneser image's network:
+To run a Selenium test suite, start the Condenser docker image with a name `condenser` (like `docker run --name condenser -itp 8080:8080 steemit/condenser:latest`) and then run the blackboxtest image attached to the condneser image's network:
 
 ```
 docker build -t=steemit/condenser-blackboxtest blackboxtest/
